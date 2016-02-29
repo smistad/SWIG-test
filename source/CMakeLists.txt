@@ -19,8 +19,6 @@ set(SOURCE_FILES
 )
 
 set_source_files_properties(python.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(python.i PROPERTIES SWIG_FLAGS "-includeall")
+#set_source_files_properties(python.i PROPERTIES SWIG_FLAGS "-includeall") # Should avoid this flag
 swig_add_module(test python python.i ${SOURCE_FILES})
 swig_link_libraries(test ${PYTHON_LIBRARIES})
-#swig_link_libraries(test)
-
